@@ -64,7 +64,7 @@ public class Tutor {
 
 	}
 
-	public void imprimeDados() {
+	public void mostrarDados() {
 
 		System.out.println("Nome:" + getNome());
 		System.out.println("Telefone:" + getTelefone());

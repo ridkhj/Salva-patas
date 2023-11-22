@@ -44,14 +44,41 @@ public class VetorDeEstabelecimentos {
 	}
 
 	public void mostrarEstabelecimentos() {
+		
 		int i;
-		for (i = 0; i < estabelecimentos.length; i++) {
-
-			System.out.println("Estabelecimento " + (i + 1));
-			estabelecimentos[i].mostrarDados();
-			System.out.println();
-
+		if(quantidadeDeEstabelecimentos > 0) {
+			for (i = 0; i < estabelecimentos.length; i++) {
+	
+				System.out.println("Estabelecimento " + (i + 1));
+				estabelecimentos[i].mostrarDados();
+				System.out.println();
+	
+			}
+		}else {
+			
+			System.out.println("Sem contas do tipo estabelecimento cadastradas.");
+			
 		}
 	}
+	
+	
 
+	public boolean trocarConta(Scanner scan) {
+		
+		if(quantidadeDeEstabelecimentos > 0) {
+			
+			mostrarEstabelecimentos();
+			System.out.println("Informe o indice da conta a logar:");
+			int key = scan.nextInt();
+			estabLogado = estabelecimentos[key-1];
+			return true;
+			
+		}else {
+			System.out.println("Nenhuma conta do tipo tutor cadastrada. ");
+			return false;
+		}
+			
+		
+		
+	}
 }

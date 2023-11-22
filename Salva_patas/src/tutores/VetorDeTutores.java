@@ -37,7 +37,7 @@ public class VetorDeTutores {
 		if (tutores != null) {
 			for (int i = 0; i < tutores.length; i++) {
 				System.out.println("Tutor " + (i + 1));
-				tutores[i].imprimeDados();
+				tutores[i].mostrarDados();
 			}
 		} else {
 			System.out.println("Sem tutores cadastrados");
@@ -71,7 +71,7 @@ public class VetorDeTutores {
 		
 		tutorLogado = tutor;
 		
-		tutor.imprimeDados();
+		tutor.mostrarDados();
 		tutores[quantidadeDeTutores] = tutor;
 		
 		tutores[quantidadeDeTutores].inicializarPetsFilhos();
@@ -84,6 +84,23 @@ public class VetorDeTutores {
 	public void adotarPet(Pets petAdotado) {
 	
 		tutorLogado.adotarPet(petAdotado);
+		
+	}
+	
+	public boolean trocarConta(Scanner scan) {
+		
+		if(quantidadeDeTutores > 0) {
+			
+			mostrarTutores();
+			System.out.println("Informe o indice do perfil a logar ");
+			int key = scan.nextInt();
+			tutorLogado = tutores[key-1];
+			
+			return true;	
+		}else {
+			System.out.println("Nenhuma conta do tipo tutor cadastrada. ");
+			return false;
+		}
 		
 	}
 	
