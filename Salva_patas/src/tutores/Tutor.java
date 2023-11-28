@@ -84,8 +84,16 @@ public class Tutor {
 	}
 	
 	public void adotarPet(Pets petAdotado) {
-		petsFilhos.adicionarPet(petAdotado);
-		quantidadeDeFilhos++;
+		if(petsFilhos.getQuantidadeDePets() >= petsFilhos.getLength()) {
+			System.out.println();
+			System.out.println(nome + " ja adotou a quantidade desejada de pets");
+			System.out.println(petAdotado.getNome() + " ficou triste :(");
+		}else {
+			petsFilhos.adicionarPet(petAdotado);
+			quantidadeDeFilhos++;
+			
+		}
+		
 	}
 	
 	public void mostrarPetsFilhos() {

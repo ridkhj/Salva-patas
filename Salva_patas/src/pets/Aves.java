@@ -11,13 +11,13 @@ public class Aves extends Pets {
     
     @Override
     public void emitirSom() {
-    	System.out.println(" cantando.");
+    	System.out.println(nome + " esta cantando.");
  	
     }
     
     @Override
     public void interagir() {
-    	System.out.println(" batendo asas e ciscando.");
+    	System.out.println(nome + " esta batendo asas e ciscando.");
     }
 }
 

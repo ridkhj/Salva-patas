@@ -166,7 +166,9 @@ public class VetorDePets {
 			int indiceDoPetAAdotar = scan.nextInt();
 
 			pets[indiceDoPetAAdotar - 1].setAdotado(true);
-
+			pets[indiceDoPetAAdotar - 1].interagir();
+			pets[indiceDoPetAAdotar - 1].emitirSom();
+			
 			return pets[indiceDoPetAAdotar - 1];
 		}
 

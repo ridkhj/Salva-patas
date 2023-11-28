@@ -79,13 +79,13 @@ public class Pets {
 	
 	void interagir() {
 		
-		System.out.println("Animal interagindo fisicamente. ");
+		System.out.println(nome + " esta interagindo fisicamente. ");
 	} 
 	
 	
 	void emitirSom() {
 		
-		System.out.println("Animal emitindo som. ");
+		System.out.println(nome + " esta emitindo som. ");
 		
 	}
 
