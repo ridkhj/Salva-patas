@@ -11,7 +11,7 @@ public class Estabelecimento {
 	private String nome;
 	private String cnpj;
 	public VetorDePets petsCadastrados = new VetorDePets(20);
-
+	
 	public Estabelecimento() {
 
 	}
@@ -19,6 +19,10 @@ public class Estabelecimento {
 	public Estabelecimento(String nome, String cnpj) {
 		this.nome = nome;
 		this.cnpj = cnpj;
+	}
+	
+	public int getQuantidadeDePets() {
+		return petsCadastrados.getQuantidadeDePets();
 	}
 	
 	public String getNome() {

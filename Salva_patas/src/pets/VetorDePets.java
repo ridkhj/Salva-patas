@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class VetorDePets {
 
 	private Pets[] pets;
-	private static int quantidadeDePets;
-	private static int petsDisponiveis;
+	private int quantidadeDePets;
+	private int petsDisponiveis;
 	private int tam;
 
 	public VetorDePets() {
@@ -15,6 +15,10 @@ public class VetorDePets {
 
 	public VetorDePets(int tam) {
 		this.tam = tam;
+	}
+	
+	public int getQuantidadeDePets() {
+		return quantidadeDePets;
 	}
 
 	public int getTam() {
@@ -35,7 +39,8 @@ public class VetorDePets {
 	public void mostrarPets() {
 
 		int i;
-		if (pets[0] != null) {
+
+		if (quantidadeDePets > 0 && pets[0] != null) {
 			System.out.println("Todos os pets cadastrados e seus dados.");
 			System.out.println();
 
@@ -46,8 +51,7 @@ public class VetorDePets {
 					System.out.println("Pet " + (i + 1));
 					pets[i].imprimirPet();
 					System.out.println();
-					System.out.println();
-
+					
 				}
 			}
 

@@ -13,12 +13,12 @@ public class Caninos extends Pets {
     }
    
     @Override
-    void emitirSom() {
+    public void emitirSom() {
         System.out.println("Latindo");
     }
 
     @Override
-    void interagir() {
+    public void interagir() {
         System.out.println("Balançando o rabo");
     }
    

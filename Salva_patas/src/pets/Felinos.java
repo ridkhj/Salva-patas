@@ -14,12 +14,12 @@ public class Felinos extends Pets {
 
 	  	
 	    @Override
-	    void emitirSom() {
+	    public void emitirSom() {
 	        System.out.println("Miando");
 	    }
 
 	    @Override
-	    void interagir() {
+	    public void interagir() {
 	        System.out.println("Esfregando e ronronando");
 	    }
 		

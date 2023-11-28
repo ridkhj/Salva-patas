@@ -23,7 +23,8 @@ public class Tutor {
 		this.cpf = cpf;
 
 	}
-
+	
+	
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
@@ -73,13 +74,18 @@ public class Tutor {
 		if (petsFilhos == null) {
 			System.out.println("Esse tutor não têm pets");
 		} else {
-			petsFilhos.mostrarPets();
+			if(quantidadeDeFilhos > 0) {
+				mostrarPetsFilhos();
+			}else {
+				System.out.println("Nem um pet adotado");
+			}	
 		}
 
 	}
 	
 	public void adotarPet(Pets petAdotado) {
 		petsFilhos.adicionarPet(petAdotado);
+		quantidadeDeFilhos++;
 	}
 	
 	public void mostrarPetsFilhos() {

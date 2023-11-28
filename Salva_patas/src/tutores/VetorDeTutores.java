@@ -6,10 +6,10 @@ import pets.Pets;
 
 public class VetorDeTutores {
 
-	Tutor[] tutores;
+	private Tutor[] tutores;
 	public Tutor tutorLogado;
-	int quantidadeDeTutores;
-	int tam;
+	private int quantidadeDeTutores;
+	private int tam;
 
 	VetorDeTutores() {
 
@@ -36,8 +36,12 @@ public class VetorDeTutores {
 
 		if (tutores != null) {
 			for (int i = 0; i < tutores.length; i++) {
-				System.out.println("Tutor " + (i + 1));
-				tutores[i].mostrarDados();
+				
+				if(tutores[i] != null) {
+					System.out.println("Tutor " + (i + 1));
+					tutores[i].mostrarDados();
+					System.out.println();
+				}
 			}
 		} else {
 			System.out.println("Sem tutores cadastrados");
@@ -74,9 +78,6 @@ public class VetorDeTutores {
 		tutor.mostrarDados();
 		tutores[quantidadeDeTutores] = tutor;
 		
-		tutores[quantidadeDeTutores].inicializarPetsFilhos();
-		tutorLogado.inicializarPetsFilhos();
-		
 		quantidadeDeTutores++;
 
 	}
@@ -92,6 +93,7 @@ public class VetorDeTutores {
 		if(quantidadeDeTutores > 0) {
 			
 			mostrarTutores();
+			
 			System.out.println("Informe o indice do perfil a logar ");
 			int key = scan.nextInt();
 			tutorLogado = tutores[key-1];

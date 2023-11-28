@@ -69,7 +69,8 @@ class Main {
 		System.out.println("[4] Sair. ");
 
 		key = readerI.nextInt();
-
+		
+		
 		switch (key) {
 
 		case 0:
@@ -89,7 +90,7 @@ class Main {
 			tutores.cadastrarTutor(readerS, readerI);
 			logado = true;
 			login = 2;
-			aguardar();
+			
 
 			break;
 		case 3:
@@ -123,7 +124,7 @@ class Main {
 		tutores.inicializadorTutor();
 		transitoLogin();
 
-		while (key != 5) {
+		while (key != 6) {
 
 			System.out.println("=============================================");
 			System.out.println("============= SALVA PATAS ===================");
@@ -176,7 +177,7 @@ class Main {
 
 				if (logado) 
 					if (login == 2) 
-						if (estabelecimentos.estabLogado.petsCadastrados != null) 
+						if (estabelecimentos.estabLogado.getQuantidadeDePets() <= 0) 
 							System.out.println("Sem pets disponiveis para adocao");
 						 else 
 							tutores.adotarPet(estabelecimentos.estabLogado.serAdotado(readerI));

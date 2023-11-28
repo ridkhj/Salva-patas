@@ -82,6 +82,7 @@ public class Pets {
 		System.out.println("Animal interagindo fisicamente. ");
 	} 
 	
+	
 	void emitirSom() {
 		
 		System.out.println("Animal emitindo som. ");
